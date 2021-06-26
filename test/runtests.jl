@@ -1069,7 +1069,7 @@ end
 end
 
 # https://github.com/JuliaLang/julia/pull/29901
-@testset "current_exceptions" begin
+VERSION >= v"1.1" && @testset "current_exceptions" begin
     # Display of errors which cause more than one entry on the exception stack
     excs = try
         try
